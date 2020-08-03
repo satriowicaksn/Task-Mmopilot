@@ -138,7 +138,8 @@
   </div>
 </div>
 <?php  } ?>
-<script src="<?= base_url(); ?>assets/vendor/jquery/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.21/b-1.6.2/b-html5-1.6.2/b-print-1.6.2/fc-3.3.1/datatables.min.css"/>
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.21/b-1.6.2/b-html5-1.6.2/b-print-1.6.2/fc-3.3.1/datatables.min.js"></script>
 <script type="text/javascript">
   $(document).ready(function(){
     $('#tabel').DataTable();

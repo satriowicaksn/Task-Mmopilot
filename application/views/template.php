@@ -98,8 +98,10 @@
     </div>
 
     <!-- JavaScript files-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
 
-    <!-- <script src="<?= base_url(); ?>assets/vendor/jquery/jquery.min.js"></script> -->
+</script>
+    <script src="<?= base_url(); ?>assets/vendor/jquery/jquery.min.js"></script>
     <script src="<?= base_url(); ?>assets/vendor/popper.js/umd/popper.min.js"> </script>
     <script src="<?= base_url(); ?>assets/vendor/bootstrap/js/bootstrap.min.js"></script>
     <script src="<?= base_url(); ?>assets/vendor/jquery.cookie/jquery.cookie.js"> </script>
