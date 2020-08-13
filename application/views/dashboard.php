@@ -161,34 +161,34 @@
                       <td><?= $o->order_target_progres ?></td>
                       <td>
                         <?php if ($o->order_priority == '1'){ ?>
-                          <button type="button" name="button" class="btn btn-sm btn-danger text-light">Priority <?= $o->order_priority ?></button>
+                          <button data-toggle="modal" data-target="#priority<?=$o->id_order_item?>" type="button" name="button" class="btn btn-sm btn-danger text-light">Priority <?= $o->order_priority ?></button>
                         <?php } ?>
                         <?php if ($o->order_priority == '2'){ ?>
-                          <button type="button" name="button" class="btn btn-sm btn-primary text-light">Priority <?= $o->order_priority ?></button>
+                          <button data-toggle="modal" data-target="#priority<?=$o->id_order_item?>" type="button" name="button" class="btn btn-sm btn-primary text-light">Priority <?= $o->order_priority ?></button>
                         <?php } ?>
                         <?php if ($o->order_priority == '3'){ ?>
-                          <button type="button" name="button" class="btn btn-sm btn-warning text-light">Priority <?= $o->order_priority ?></button>
+                          <button data-toggle="modal" data-target="#priority<?=$o->id_order_item?>" type="button" name="button" class="btn btn-sm btn-warning text-light">Priority <?= $o->order_priority ?></button>
                         <?php } ?>
                         <?php if ($o->order_priority == '4'){ ?>
-                          <button type="button" name="button" class="btn btn-sm btn-warning text-light">Priority <?= $o->order_priority ?></button>
+                          <button data-toggle="modal" data-target="#priority<?=$o->id_order_item?>" type="button" name="button" class="btn btn-sm btn-warning text-light">Priority <?= $o->order_priority ?></button>
                         <?php } ?>
                         <?php if ($o->order_priority == '5'){ ?>
-                          <button type="button" name="button" class="btn btn-sm btn-warning text-light">Priority <?= $o->order_priority ?></button>
+                          <button data-toggle="modal" data-target="#priority<?=$o->id_order_item?>" type="button" name="button" class="btn btn-sm btn-warning text-light">Priority <?= $o->order_priority ?></button>
                         <?php } ?>
                         <?php if ($o->order_priority == '6'){ ?>
-                          <button type="button" name="button" class="btn btn-sm btn-info text-light">Priority <?= $o->order_priority ?></button>
+                          <button data-toggle="modal" data-target="#priority<?=$o->id_order_item?>" type="button" name="button" class="btn btn-sm btn-info text-light">Priority <?= $o->order_priority ?></button>
                         <?php } ?>
                         <?php if ($o->order_priority == '7'){ ?>
-                          <button type="button" name="button" class="btn btn-sm btn-info text-light">Priority <?= $o->order_priority ?></button>
+                          <button data-toggle="modal" data-target="#priority<?=$o->id_order_item?>" type="button" name="button" class="btn btn-sm btn-info text-light">Priority <?= $o->order_priority ?></button>
                         <?php } ?>
                         <?php if ($o->order_priority == '8'){ ?>
-                          <button type="button" name="button" class="btn btn-sm btn-info text-light">Priority <?= $o->order_priority ?></button>
+                          <button data-toggle="modal" data-target="#priority<?=$o->id_order_item?>" type="button" name="button" class="btn btn-sm btn-info text-light">Priority <?= $o->order_priority ?></button>
                         <?php } ?>
                         <?php if ($o->order_priority == '9'){ ?>
-                          <button type="button" name="button" class="btn btn-sm btn-success text-light">Priority <?= $o->order_priority ?></button>
+                          <button data-toggle="modal" data-target="#priority<?=$o->id_order_item?>" type="button" name="button" class="btn btn-sm btn-success text-light">Priority <?= $o->order_priority ?></button>
                         <?php } ?>
                         <?php if ($o->order_priority == '10'){ ?>
-                          <button type="button" name="button" class="btn btn-sm btn-success text-light">Priority <?= $o->order_priority ?></button>
+                          <button data-toggle="modal" data-target="#priority<?=$o->id_order_item?>" type="button" name="button" class="btn btn-sm btn-success text-light">Priority <?= $o->order_priority ?></button>
                         <?php } ?>
 
                       </td>
@@ -209,6 +209,38 @@
       </div>
   </div>
 </section>
+
+<!-- Modal Hapus-->
+<?php foreach ($order as $o) { ?>
+<div id="priority<?=$o->id_order_item?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" class="modal fade text-left">
+  <div role="document" class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><strong id="exampleModalLabel" class="modal-title">Update Priority</strong>
+        <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+      </div>
+      <div class="modal-body">
+        <form action="<?= base_url();  ?>index.php/home/edit_priority" method="post">
+          <input type="hidden" name="id" value="<?=$o->id_order_item?>">
+          <div class="form-group">
+            <label for="">Priority</label>
+            <select class="form-control" name="order_priority" required>
+              <option value="<?= $o->order_priority ?>">Priority <?= $o->order_priority ?></option>
+              <?php foreach ($priority as $p): ?>
+                <?php if ($p->id_priority != $o->order_priority): ?>
+                  <option value="<?= $p->id_priority ?>"><?= $p->keterangan ?></option>
+                <?php endif; ?>
+              <?php endforeach; ?>
+            </select>
+          </div>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-sm btn-success" id="delete">Update</button>
+      </div>
+      </form>
+    </div>
+  </div>
+</div>
+<?php  } ?>
 <script src="<?= base_url(); ?>assets/jquery/jquery-3.5.1.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){

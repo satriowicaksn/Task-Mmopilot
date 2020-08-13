@@ -14,8 +14,8 @@
           <table class="table table-striped table-sm" id="tabel">
             <thead class="text-white bg-info">
               <tr>
-                <th>Order</th>
                 <th>User Id</th>
+                <th>Order</th>
                 <th>Price</th>
                 <th>Order Date</th>
                 <th>Status</th>
@@ -25,9 +25,9 @@
             <tbody>
               <?php foreach ($order as $o) { ?>
               <tr>
-                <td><?= $o->nama_temjob?></td>
-                <td><?= $o->name ?> # <?= $o->id_user?></td>
-                <td><?= number_format($o->order_price)?> </td>
+                <td> <b><?= $o->username_game?></b></td>
+                <td> <b><?= $o->nama_temjob?></b></td>
+                <td><?= $o->order_price ?> $</td>
                 <td><?= date('d M Y',$o->orderDate)?></td>
                 <td>
                   <?php if ($o->order_status == 'aktif'){ ?>
@@ -40,7 +40,7 @@
                 <td> <form class="" action="<?= base_url() ?>index.php/order/update_order" method="post">
                   <input type="hidden" name="id" value="<?= $o->id_order?>">
                     <a href="#" class="btn btn-sm btn-info" data-toggle="modal" data-target="#modal_detail<?= $o->id_order ?>"> <span class="fa fa-eye"></span></a>
-                    <!-- <a href="#" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_update<?= $o->id_order ?>"> <span class="fa fa-edit"></span></a> -->
+                    <a href="#" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal_update<?= $o->id_order ?>"> <span class="fa fa-edit"></span></a>
 
                   <a href="#" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal_hapus<?= $o->id_order ?>"> <span class="fa fa-trash"></span></a>
                 </form></td>

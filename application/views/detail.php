@@ -332,10 +332,10 @@
 </section>
 <?php  } ?>
 <!-- iki end e foreach template -->
-
+<script src="<?= base_url(); ?>assets/vendor/jquery/jquery.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
-  $('#pilih_item').select2();
+
 });
 </script>
 <script type="text/javascript">

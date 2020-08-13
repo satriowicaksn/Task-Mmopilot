@@ -70,7 +70,6 @@
             <li><a href="<?= base_url(); ?>index.php/job"> <i class="fa fa-archive"></i>Template</a></li>
             <li><a href="<?= base_url(); ?>index.php/order"> <i class="fa fa-shopping-cart"></i>Order</a></li>
             <li><a href="<?= base_url(); ?>index.php/laporan"> <i class="fa fa-edit"></i>Laporan</a></li>
-            <li><a href="<?= base_url(); ?>index.php/laporan_shift"> <i class="fa fa-book"></i>Laporan Shift</a></li>
             <li><a href="<?= base_url(); ?>index.php/data_laporan"> <i class="fa fa-book"></i>Data Laporan</a></li>
             <li><a href="<?= base_url(); ?>index.php/user/staff_data"><i class="fa fa-user"></i>Data Staff</a></li>
               <li><a href="<?= base_url(); ?>index.php/user/client_data"><i class="fa fa-users"></i>Data Client</a></li>
@@ -83,7 +82,6 @@
             <li><a href="<?= base_url(); ?>index.php/home"> <i class="fa fa-home"></i>Home</a></li>
             <li><a href="<?= base_url(); ?>index.php/order"> <i class="fa fa-shopping-cart"></i>Order</a></li>
             <li><a href="<?= base_url(); ?>index.php/laporan"> <i class="fa fa-edit"></i>Laporan</a></li>
-              <li><a href="<?= base_url(); ?>index.php/laporan_shift"> <i class="fa fa-book"></i>Laporan Shift</a></li>
             <li><a href="<?= base_url(); ?>index.php/item"> <i class="fa fa-list"></i>Item</a></li>
             <li><a href="<?= base_url(); ?>index.php/job"> <i class="fa fa-archive"></i>Template</a></li>
             <li><a href="<?= base_url(); ?>index.php/data_laporan"> <i class="fa fa-book"></i>Data Laporan</a></li>
